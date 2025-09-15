@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -34,6 +33,13 @@ section {
 h2 {
   border-bottom: 2px solid #ccc;
   padding-bottom: 10px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+}
+h2.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .projects {
@@ -43,16 +49,16 @@ h2 {
 }
 
 .card {
-  background: #fff;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
+  transition: all 0.4s ease;
 }
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
 }
 .card img {
   width: 100%;
@@ -62,20 +68,23 @@ h2 {
 .card:hover img {
   transform: scale(1.05);
 }
+
 .btn {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
   background: #ff9800;
   color: #fff;
-  text-decoration: none;
   border-radius: 5px;
-  transition: all 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 .btn:hover {
   background: #e68900;
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
 footer {
   text-align: center;
   padding: 20px;

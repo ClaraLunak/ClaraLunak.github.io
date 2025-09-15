@@ -4,132 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clara Lunak – Portfolio</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #00ff99;
+      font-family: "Courier New", monospace;
     }
     header {
-      background: linear-gradient(135deg, #4a90e2, #9013fe);
-      color: white;
-      padding: 100px 20px;
       text-align: center;
+      padding: 100px 20px;
     }
     header h1 {
       font-size: 3rem;
-      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid #00ff99;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink .8s infinite;
+      display: inline-block;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
-    .project-card img {
-      height: 200px;
-      object-fit: cover;
+    @keyframes blink {
+      from { border-color: transparent }
+      to { border-color: #00ff99 }
+    }
+    h2 {
+      color: #33ffcc;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    .project-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .project-card h5 {
+      color: #00e6b8;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     footer {
-      background: #222;
-      color: #ccc;
+      margin-top: 50px;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
-    }
-    footer a {
-      color: #4a90e2;
-      text-decoration: none;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Clara Lunak</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Om mig</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projekt</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Kompetenser</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <!-- Header -->
   <header>
-    <h1>Hej, jag är Clara 👋</h1>
-    <p>Systemutvecklarstudent & framtida cybersäkerhetsspecialist</p>
+    <h1>$ ClaraLunak</h1>
+    <p>Systemutvecklare | Kodnörd | Cybersäkerhet 🔐</p>
   </header>
 
   <!-- Om mig -->
-  <section id="about" class="container my-5">
-    <h2 class="mb-4">Om mig</h2>
+  <section id="about" class="container">
+    <h2>> Om mig</h2>
     <p>
-      Jag studerar systemutveckling vid Örebro universitet och har ett stort intresse för
-      cybersäkerhet, maskininlärning och problemlösning. Jag gillar att driva projekt framåt 
-      och samarbeta i team där jag kan bidra med både teknisk kompetens och ledarskap.
+      Hej! Jag är Clara 👩‍💻. Jag älskar kod, terminalfönster och att bygga lösningar som andra
+      knappt vågar röra. Just nu pluggar jag systemutveckling och nördar ner mig i cybersäkerhet,
+      AI och allt som får datorn att jobba hårdare än jag.
     </p>
   </section>
 
   <!-- Projekt -->
-  <section id="projects" class="container my-5">
-    <h2 class="mb-4">Mina projekt</h2>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card">
-          <img src="projekt1.jpg" class="card-img-top" alt="Twitter Fake News">
-          <div class="card-body">
-            <h5 class="card-title">Twitter Fake News</h5>
-            <p class="card-text">Ett ML-projekt där vi byggde klassificerare för att identifiera falska nyheter.</p>
-            <a href="https://github.com/ClaraLunak/Twitter-Fake-News" class="btn btn-primary" target="_blank">Se på GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card">
-          <img src="projekt2.jpg" class="card-img-top" alt="Galactic Getaways">
-          <div class="card-body">
-            <h5 class="card-title">Galactic Getaways</h5>
-            <p class="card-text">Ett spelutvecklingsprojekt i Unity med fokus på design och UX.</p>
-            <a href="#" class="btn btn-primary" target="_blank">Se på GitHub</a>
-          </div>
-        </div>
-      </div>
-      <!-- Lägg till fler projekt här -->
+  <section id="projects" class="container">
+    <h2>> Mina projekt</h2>
+    <div class="project-card">
+      <h5>🐍 Twitter Fake News</h5>
+      <p>[Python, ML] – Tränade klassificerare för att identifiera falska nyheter. 
+      Resultatet? Maskinen är bättre på bullshit-detekt än de flesta människor.</p>
+      <a href="https://github.com/ClaraLunak/Twitter-Fake-News" target="_blank">Se koden här</a>
+    </div>
+    <div class="project-card">
+      <h5>🚀 Galactic Getaways</h5>
+      <p>[Unity, C#] – Ett spelutvecklingsprojekt där vi skickade spelaren ut i rymden. 
+      Grafiken var cool, men buggarna var ännu coolare.</p>
+      <a href="#">Se koden här</a>
+    </div>
+    <div class="project-card">
+      <h5>🎧 Podd-analys</h5>
+      <p>[Python, Data Analysis] – Byggde ett system för att analysera podd-data och trender. 
+      Ja, till och med din poddhistorik är ett dataset för mig.</p>
+      <a href="#">Se koden här</a>
     </div>
   </section>
 
-  <!-- Kompetenser -->
-  <section id="skills" class="container my-5">
-    <h2 class="mb-4">Kompetenser</h2>
+  <!-- Skills -->
+  <section id="skills" class="container">
+    <h2>> Kompetenser</h2>
     <ul>
-      <li>💻 Programmering: Python, Java, C#</li>
-      <li>📊 Dataanalys: Pandas, Numpy, Machine Learning</li>
+      <li>💻 Kodspråk: Python, Java, C#</li>
+      <li>📊 Data & ML: Pandas, Numpy, Scikit-Learn</li>
       <li>🌐 Webbutveckling: HTML, CSS, GitHub Pages</li>
-      <li>🔐 Intresse: Cybersäkerhet, etisk hacking</li>
+      <li>🔐 Cybersäkerhet: penetration testing (nybörjare, men farlig 😉)</li>
     </ul>
   </section>
 
   <!-- Kontakt -->
-  <section id="contact" class="container my-5">
-    <h2 class="mb-4">Kontakt</h2>
-    <p>✉️ Mail: <a href="mailto:dinmail@example.com">dinmail@example.com</a></p>
-    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/dinprofil/" target="_blank">dinprofil</a></p>
-    <p>🐙 GitHub: <a href="https://github.com/ClaraLunak" target="_blank">ClaraLunak</a></p>
+  <section id="contact" class="container">
+    <h2>> Kontakt</h2>
+    <p>📧 <a href="mailto:dinmail@example.com">dinmail@example.com</a></p>
+    <p>🐙 <a href="https://github.com/ClaraLunak" target="_blank">github.com/ClaraLunak</a></p>
+    <p>💼 <a href="https://www.linkedin.com/in/dinprofil/" target="_blank">linkedin.com/in/dinprofil</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Clara Lunak | Byggd med ❤️ och Bootstrap</p>
+    <p># Portfolio genererad av kod, svett och koffein ☕</p>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

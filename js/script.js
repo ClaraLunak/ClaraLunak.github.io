@@ -24,6 +24,19 @@ function checkScroll() {
 }
 window.addEventListener('scroll', checkScroll);
 
+// Rubrik-animation
+const headings = document.querySelectorAll('h2');
+function revealHeadings() {
+  headings.forEach(h => {
+    const top = h.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50) {
+      h.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealHeadings);
+revealHeadings();
+
 // Dynamiskt generera projektkort från JSON
 fetch('data/projects.json')
   .then(res => res.json())
@@ -41,4 +54,3 @@ fetch('data/projects.json')
       container.appendChild(card);
     });
   });
-

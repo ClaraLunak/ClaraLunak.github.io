@@ -1,11 +1,116 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Välkommen till min sida</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clara Lunak – Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hej, jag heter Clara 👋</h1>
-    <p>Detta är min första GitHub Pages-sida!</p>
+  <header>
+    <h1>Clara Lunak</h1>
+    <nav>
+      <a href="#about">Om mig</a>
+      <a href="#projects">Projekt</a>
+      <a href="#skills">Kompetenser</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Om mig</h2>
+    <p>Hej! Jag är Clara, systemutvecklarstudent på Örebro universitet. 
+    Jag brinner för problemlösning, programmering och cybersäkerhet, 
+    och vill använda tekniken för att göra skillnad.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Mina projekt</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="projekt1.jpg" alt="Projektbild">
+        <h3>Twitter Fake News</h3>
+        <p>Ett maskininlärningsprojekt där vi byggde klassificerare för att identifiera falska nyheter.</p>
+        <a href="https://github.com/ClaraLunak/Twitter-Fake-News">Se på GitHub</a>
+      </div>
+      <div class="card">
+        <img src="projekt2.jpg" alt="Projektbild">
+        <h3>Galactic Getaways</h3>
+        <p>Ett spelutvecklingsprojekt i Unity med fokus på design och användarupplevelse.</p>
+        <a href="#">Se på GitHub</a>
+      </div>
+      <!-- Lägg till fler projekt här -->
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Kompetenser</h2>
+    <p>📌 Python, Java, C# <br>
+       📌 Pandas, Numpy, Machine Learning <br>
+       📌 Webbutveckling: HTML, CSS, GitHub Pages</p>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>✉️ Mail: <a href="mailto:dinmail@example.com">dinmail@example.com</a></p>
+    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/dinprofil/">dinprofil</a></p>
+    <p>🐙 GitHub: <a href="https://github.com/ClaraLunak">ClaraLunak</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Clara Lunak</p>
+  </footer>
 </body>
 </html>
+

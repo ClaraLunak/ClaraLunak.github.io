@@ -43,21 +43,7 @@ if (aboutText) {
     }
   }
   typeText();
-}
 
-// --- Studieprogress skill bar ---
-const skillBar = document.querySelector(".progress");
-const progressText = document.getElementById("progress-text");
-if (skillBar && progressText) {
-  const start = new Date("2023-08-26"); // startdatum
-  const end = new Date("2026-06-15");   // examensdatum
-  const today = new Date();
-
-  let progress = ((today - start) / (end - start)) * 100;
-  progress = Math.min(Math.max(progress, 0), 100);
-
-  skillBar.style.width = progress + "%";
-  progressText.textContent = `Studier: ${progress.toFixed(1)}% klara`;
 }
 // --- Studieprogress ---
 const studyBar = document.getElementById("study-progress");

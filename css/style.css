@@ -56,3 +56,13 @@ nav a:hover {
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+#typing-text::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+

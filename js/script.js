@@ -1,4 +1,4 @@
-// --- Typ-animation för header (Clara Lunak) ---
+// --- Typ-animation för header ---
 document.addEventListener("DOMContentLoaded", function () {
   const headerText = "Clara Lunak";
   const headerElement = document.getElementById("typing-text");
@@ -14,11 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
   typeHeader();
 });
 
-// --- Typ-animation för About-me sida ---
+// --- Typ-animation för About ---
 const aboutHeading = document.getElementById("about-heading");
 const aboutText = document.getElementById("about-text");
 if (aboutHeading) {
-  // Rubrik
   let i = 0;
   const headingText = aboutHeading.textContent;
   aboutHeading.textContent = "";
@@ -33,7 +32,6 @@ if (aboutHeading) {
 }
 
 if (aboutText) {
-  // Text
   const fullText = aboutText.textContent;
   aboutText.textContent = "";
   let j = 0;
@@ -47,7 +45,7 @@ if (aboutText) {
   typeText();
 }
 
-// --- Studieprogress ---
+// --- Studieprogress skill bar ---
 const skillBar = document.querySelector(".progress");
 const progressText = document.getElementById("progress-text");
 if (skillBar && progressText) {

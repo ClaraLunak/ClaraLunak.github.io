@@ -257,3 +257,7 @@ footer p {
   transform: scale(1.05);
 }
 
+.skill:hover {
+  transform: scale(1.05);
+}
+

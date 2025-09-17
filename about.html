@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Om mig</h1>
+    <h1 id="typing-text"></h1>
     <nav>
       <a href="index.html">Hem</a>
       <a href="about.html" class="active">Om mig</a>
@@ -19,25 +19,22 @@
 
   <main>
     <section class="about-section">
-      <div class="about-left">
-        <img src="images/profil.jpg" alt="Clara Lunak" class="profile-pic">
-      </div>
-      <div class="about-right">
-        <h2>Hej! Jag är Clara 👋</h2>
-        <p>
+      <img src="images/profil.jpg" alt="Clara Lunak" class="profile-pic">
+      <div class="about-text">
+        <h2 id="about-heading">Hej! Jag är Clara</h2>
+        <p id="about-text">
           Jag är en driven systemutvecklarstudent på Örebro universitet. 
           Jag älskar problemlösning, maskininlärning och cybersäkerhet – 
           men även design och att skapa snygga och användarvänliga lösningar.
         </p>
 
-        <div class="skills">
-          <div class="skill">💻 Programmering</div>
-          <div class="skill">🔐 Cybersäkerhet</div>
-          <div class="skill">🎨 Design</div>
-          <div class="skill">🤖 Maskininlärning</div>
+        <div class="skill-container">
+          <h3>Studieprogress</h3>
+          <div class="skill-bar">
+            <div class="progress"></div>
+          </div>
+          <p id="progress-text"></p>
         </div>
-
-        <a href="projects.html" class="btn">Se mina projekt</a>
       </div>
     </section>
   </main>
@@ -56,5 +53,7 @@
       </a>
     </div>
   </footer>
+
+  <script src="js/about.js"></script>
 </body>
 </html>

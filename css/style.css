@@ -331,3 +331,12 @@ footer p {
   font-size: 0.9rem;
   color: #555;
 }
+.skill {
+  margin-bottom: 15px;
+}
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+

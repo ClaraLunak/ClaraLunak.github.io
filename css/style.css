@@ -204,4 +204,56 @@ footer p {
 .contact-form button:hover {
   background: #a66ab9;
 }
+/* Om mig-sektion */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 40px auto;
+  gap: 40px;
+  padding: 20px;
+}
+
+.about-left {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-right {
+  flex: 2 1 400px;
+}
+
+.about-right h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.about-right p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skill {
+  background: #f8e4f0;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 0.95em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
 

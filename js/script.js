@@ -1,12 +1,12 @@
 // Typ-animation för "Clara Lunak" (headern)
 document.addEventListener("DOMContentLoaded", function () {
-  const text = "Clara Lunak";
+  const headerText = "Clara Lunak";
   const element = document.getElementById("typing-text");
   let index = 0;
 
   function typeLetter() {
-    if (index < text.length) {
-      element.textContent += text.charAt(index);
+    if (index < headerText.length) {
+      element.textContent += headerText.charAt(index);
       index++;
       setTimeout(typeLetter, 150); // tid i ms per bokstav
     }
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Typ-animation för "Om mig"-sektionen
 const aboutText = document.getElementById('about-text');
 if (aboutText) {
-  const text = aboutText.textContent;
+  const aboutContent = aboutText.textContent;
   aboutText.textContent = '';
 
   function typeText(element, text, index = 0) {
@@ -36,7 +36,7 @@ if (aboutText) {
 
   function checkScroll() {
     if (isInViewport(aboutText) && aboutText.textContent === '') {
-      typeText(aboutText, text);
+      typeText(aboutText, aboutContent);
       window.removeEventListener('scroll', checkScroll);
     }
   }

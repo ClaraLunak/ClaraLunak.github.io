@@ -65,4 +65,43 @@ nav a:hover {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
+footer {
+  position: fixed;         /* Gör footern sticky */
+  bottom: 0;               /* Alltid längst ner */
+  left: 0;
+  width: 100%;
+  background: #d291bc;     /* Matchar din header */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  margin: 0 20px;
+  font-size: 14px;
+}
+
+.social-icons {
+  margin-right: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Gör ikoner vita */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0); /* Gör hover mörkare */
+}
 

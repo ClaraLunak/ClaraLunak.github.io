@@ -1,16 +1,20 @@
+/* Grundinställningar */
 html, body {
-  font-family: 'Poppins', sans-serif;
+  height: 100%;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: #fff0f5;
   color: #333;
-  height: 100%;
-  display: felx;
-  felx-direction: clumn:
+  display: flex;
+  flex-direction: column;
 }
 
-  main {
-    felx: 1;
-  }
+/* Main fyller ut utrymmet mellan header och footer */
+main {
+  flex: 1;
+}
+
+/* Header */
 header {
   background: #d291bc;
   color: white;
@@ -30,6 +34,7 @@ nav a:hover {
   border-bottom: 2px solid #ffe4e1;
 }
 
+/* Hero-sektion */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -49,6 +54,7 @@ nav a:hover {
   background: #a66ab9;
 }
 
+/* Om mig-sektion */
 .about-section {
   display: flex;
   align-items: center;
@@ -62,6 +68,8 @@ nav a:hover {
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* Typ-animation för header */
 #typing-text::after {
   content: "|";
   animation: blink 0.8s infinite;
@@ -71,10 +79,11 @@ nav a:hover {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
+
+/* Footer */
 footer {             
-  left: 0;
   width: 100%;
-  background: #d291bc;     /* Matchar din header */
+  background: #d291bc;
   color: white;
   text-align: center;
   padding: 10px;
@@ -100,12 +109,11 @@ footer p {
 .social-icons img {
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1); /* Gör ikoner vita */
+  filter: brightness(0) invert(1);
   transition: transform 0.3s, filter 0.3s;
 }
 
 .social-icons img:hover {
   transform: scale(1.2);
-  filter: brightness(1) invert(0); /* Gör hover mörkare */
+  filter: brightness(1) invert(0);
 }
-

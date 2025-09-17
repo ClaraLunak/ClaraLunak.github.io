@@ -204,60 +204,60 @@ footer p {
 .contact-form button:hover {
   background: #a66ab9;
 }
-/* Om mig-sektion */
 .about-section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
-  margin: 40px auto;
+  padding: 50px 20px;
   gap: 40px;
-  padding: 20px;
 }
 
-.about-left {
-  flex: 1 1 300px;
-  text-align: center;
+.profile-pic {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.about-right {
-  flex: 2 1 400px;
+.about-text {
+  max-width: 600px;
 }
 
-.about-right h2 {
-  font-size: 2em;
+.about-text h2 {
+  font-size: 2rem;
   margin-bottom: 15px;
 }
 
-.about-right p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  margin-bottom: 20px;
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-/* Skills */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
+/* Skill bar */
+.skill-container h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
-.skill {
-  background: #f8e4f0;
-  padding: 10px 15px;
-  border-radius: 25px;
-  font-size: 0.95em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+.skill-bar {
+  width: 100%;
+  height: 25px;
+  background: #eee;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.skill:hover {
-  transform: scale(1.05);
+.progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #d291bc, #a66ab9);
+  border-radius: 15px;
+  transition: width 2s ease-in-out;
 }
 
-.skill:hover {
-  transform: scale(1.05);
+#progress-text {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
 }
-

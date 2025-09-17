@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // --- Typ-animation för About ---
-const aboutHeading = document.getElementById("about-heading");
-const aboutText = document.getElementById("about-text");
+
 if (aboutHeading) {
   let i = 0;
   const headingText = aboutHeading.textContent;

@@ -1,10 +1,16 @@
-body {
+html, body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background: #fff0f5;
   color: #333;
+  height: 100%;
+  display: felx;
+  felx-direction: clumn:
 }
 
+  main {
+    felx: 1;
+  }
 header {
   background: #d291bc;
   color: white;
@@ -65,9 +71,7 @@ nav a:hover {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
-footer {
-  position: fixed;         /* Gör footern sticky */
-  bottom: 0;               /* Alltid längst ner */
+footer {             
   left: 0;
   width: 100%;
   background: #d291bc;     /* Matchar din header */

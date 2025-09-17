@@ -79,9 +79,4 @@ if (container) {
     })
     .catch(err => console.error("Kunde inte ladda projekten:", err));
 }
-// js/footer.js
-fetch('footer.html')
-  .then(res => res.text())
-  .then(data => {
-    document.body.insertAdjacentHTML('beforeend', data);
-  });
+

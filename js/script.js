@@ -52,5 +52,21 @@ fetch('data/projects.json')
         <a href="${proj.link}" class="btn">Se på GitHub</a>
       `;
       container.appendChild(card);
+      document.addEventListener("DOMContentLoaded", function () {
+  const text = "Clara Lunak";
+  const element = document.getElementById("typing-text");
+  let index = 0;
+
+  function typeLetter() {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeLetter, 150); // tid i ms per bokstav
+    }
+  }
+
+  typeLetter();
+});
+
     });
   });

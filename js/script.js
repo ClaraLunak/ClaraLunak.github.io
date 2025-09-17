@@ -1,82 +1,63 @@
-// Typ-animation för "Clara Lunak" (headern)
+// --- Typ-animation för header (Clara Lunak) ---
 document.addEventListener("DOMContentLoaded", function () {
   const headerText = "Clara Lunak";
-  const element = document.getElementById("typing-text");
+  const headerElement = document.getElementById("typing-text");
   let index = 0;
 
-  function typeLetter() {
+  function typeHeader() {
     if (index < headerText.length) {
-      element.textContent += headerText.charAt(index);
+      headerElement.textContent += headerText.charAt(index);
       index++;
-      setTimeout(typeLetter, 150); // tid i ms per bokstav
+      setTimeout(typeHeader, 150);
     }
   }
-
-  typeLetter();
+  typeHeader();
 });
 
+// --- Typ-animation för About-me sida ---
+const aboutHeading = document.getElementById("about-heading");
+const aboutText = document.getElementById("about-text");
+if (aboutHeading) {
+  // Rubrik
+  let i = 0;
+  const headingText = aboutHeading.textContent;
+  aboutHeading.textContent = "";
+  function typeHeading() {
+    if (i < headingText.length) {
+      aboutHeading.textContent += headingText.charAt(i);
+      i++;
+      setTimeout(typeHeading, 100);
+    }
+  }
+  typeHeading();
+}
 
-// Typ-animation för "Om mig"-sektionen
-const aboutText = document.getElementById('about-text');
 if (aboutText) {
-  const aboutContent = aboutText.textContent;
-  aboutText.textContent = '';
-
-  function typeText(element, text, index = 0) {
-    if (index < text.length) {
-      element.textContent += text[index];
-      setTimeout(() => typeText(element, text, index + 1), 30);
+  // Text
+  const fullText = aboutText.textContent;
+  aboutText.textContent = "";
+  let j = 0;
+  function typeText() {
+    if (j < fullText.length) {
+      aboutText.textContent += fullText.charAt(j);
+      j++;
+      setTimeout(typeText, 20);
     }
   }
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight && rect.bottom >= 0;
-  }
-
-  function checkScroll() {
-    if (isInViewport(aboutText) && aboutText.textContent === '') {
-      typeText(aboutText, aboutContent);
-      window.removeEventListener('scroll', checkScroll);
-    }
-  }
-
-  window.addEventListener('scroll', checkScroll);
+  typeText();
 }
 
+// --- Studieprogress ---
+const skillBar = document.querySelector(".progress");
+const progressText = document.getElementById("progress-text");
+if (skillBar && progressText) {
+  const start = new Date("2023-08-26"); // startdatum
+  const end = new Date("2026-06-15");   // examensdatum
+  const today = new Date();
 
-// Scroll-animation för rubriker
-const headings = document.querySelectorAll('h2');
-function revealHeadings() {
-  headings.forEach(h => {
-    const top = h.getBoundingClientRect().top;
-    if (top < window.innerHeight - 50) {
-      h.classList.add('visible');
-    }
-  });
+  let progress = ((today - start) / (end - start)) * 100;
+  progress = Math.min(Math.max(progress, 0), 100);
+
+  skillBar.style.width = progress + "%";
+  progressText.textContent = `Studier: ${progress.toFixed(1)}% klara`;
 }
-window.addEventListener('scroll', revealHeadings);
-revealHeadings();
-
-
-// Dynamiskt generera projektkort från JSON (projects.html)
-const container = document.getElementById('projects-container');
-if (container) {
-  fetch('data/projects.json')
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(proj => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <img src="${proj.image}" alt="Projektbild">
-          <h3>${proj.title}</h3>
-          <p>${proj.description}</p>
-          <a href="${proj.link}" class="btn" target="_blank">Se på GitHub</a>
-        `;
-        container.appendChild(card);
-      });
-    })
-    .catch(err => console.error("Kunde inte ladda projekten:", err));
-}
-

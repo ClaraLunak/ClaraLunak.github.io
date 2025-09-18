@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om mig – Clara Lunak</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Devicon ikoner -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
   <header>
@@ -23,84 +21,91 @@
     <section class="about-section">
       <img src="images/profil.jpg" alt="Clara Lunak" class="profile-pic">
       <div class="about-text">
+        <!-- Elevator Pitch -->
         <h2>Hej! Jag är Clara</h2>
-        <p>
+        <p class="pitch">
           Jag är en driven systemutvecklarstudent på Örebro universitet. 
-          Jag älskar problemlösning, maskininlärning och cybersäkerhet – 
-          men även design och att skapa snygga och användarvänliga lösningar.
+          Jag älskar problemlösning, maskininlärning och cybersäkerhet, men även design och användarvänliga lösningar.
         </p>
-
-        <!-- Studieprogress -->
-        <div class="skills-container">
-          <h3>Studieprogress</h3>
-          <div class="skill-bar">
-            <div class="progress" id="study-progress"></div>
+        <a href="cv/Clara_Lunak_CV.pdf" class="btn" target="_blank">Ladda ner CV</a>
+        
+        <!-- Tidslinje -->
+        <h3>Min akademiska resa</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="year">2023-08</span>
+            <p>Började systemutveckling, Örebro universitet</p>
           </div>
-          <p id="progress-text"></p>
-          <p class="graduation-note">Examen planerad: Juni 2026 🎓</p>
+          <div class="timeline-item">
+            <span class="year">2024-01</span>
+            <p>Utbytesperiod, [universitet]</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">2025-06</span>
+            <p>Sommarkurs i avancerad maskininlärning</p>
+          </div>
         </div>
 
         <!-- Kompetenser -->
+        <h3>Kompetenser</h3>
         <div class="skills-container">
-          <h3>Kompetenser</h3>
-
-          <!-- Programmeringsspråk -->
-          <h4>Programmeringsspråk</h4>
           <div class="skill">
-            <i class="devicon-python-plain colored"></i>
             <span class="skill-name">Python</span>
-            <div class="skill-bar"><div class="progress" data-progress="85"></div></div>
-          </div>
-          <div class="skill">
-            <i class="devicon-csharp-plain colored"></i>
-            <span class="skill-name">C#</span>
-            <div class="skill-bar"><div class="progress" data-progress="95"></div></div>
-          </div>
-          <div class="skill">
-            <i class="devicon-java-plain colored"></i>
-            <span class="skill-name">Java</span>
-            <div class="skill-bar"><div class="progress" data-progress="90"></div></div>
-          </div>
-          <div class="skill">
-            <i class="devicon-javascript-plain colored"></i>
-            <span class="skill-name">JavaScript</span>
             <div class="skill-bar"><div class="progress" data-progress="80"></div></div>
           </div>
-
-          <!-- Webbutveckling -->
-          <h4>Webbutveckling</h4>
           <div class="skill">
-            <i class="devicon-html5-plain colored"></i>
-            <span class="skill-name">HTML</span>
+            <span class="skill-name">C#</span>
+            <div class="skill-bar"><div class="progress" data-progress="98"></div></div>
+          </div>
+          <div class="skill">
+            <span class="skill-name">Java</span>
             <div class="skill-bar"><div class="progress" data-progress="95"></div></div>
           </div>
           <div class="skill">
-            <i class="devicon-css3-plain colored"></i>
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar"><div class="progress" data-progress="85"></div></div>
+          </div>
+          <div class="skill">
+            <span class="skill-name">SQL</span>
+            <div class="skill-bar"><div class="progress" data-progress="99"></div></div>
+          </div>
+          <div class="skill">
+            <span class="skill-name">HTML</span>
+            <div class="skill-bar"><div class="progress" data-progress="97"></div></div>
+          </div>
+          <div class="skill">
             <span class="skill-name">CSS</span>
+            <div class="skill-bar"><div class="progress" data-progress="97"></div></div>
+          </div>
+          <div class="skill">
+            <span class="skill-name">JSON</span>
             <div class="skill-bar"><div class="progress" data-progress="90"></div></div>
           </div>
           <div class="skill">
-            <i class="devicon-json-plain colored"></i>
-            <span class="skill-name">JSON</span>
-            <div class="skill-bar"><div class="progress" data-progress="85"></div></div>
-          </div>
-
-          <!-- Databaser -->
-          <h4>Databaser</h4>
-          <div class="skill">
-            <i class="devicon-mysql-plain colored"></i>
-            <span class="skill-name">SQL</span>
-            <div class="skill-bar"><div class="progress" data-progress="88"></div></div>
-          </div>
-
-          <!-- Ramverk -->
-          <h4>Ramverk & Verktyg</h4>
-          <div class="skill">
-            <i class="devicon-dot-net-plain colored"></i>
             <span class="skill-name">.NET</span>
-            <div class="skill-bar"><div class="progress" data-progress="75"></div></div>
+            <div class="skill-bar"><div class="progress" data-progress="90"></div></div>
           </div>
         </div>
+
+        <!-- Intressen -->
+        <h3>Intressen</h3>
+        <p>Skridskor, problemlösning, tech, design och kreativ kodning.</p>
+
+        <!-- Framtida mål -->
+        <h3>Framtidsmål</h3>
+        <p>Att bli lead engineer inom cybersäkerhet och arbeta med innovativa projekt som kombinerar säkerhet och maskininlärning.</p>
+
+        <!-- Fun fact -->
+        <h3>Fun fact</h3>
+        <p>Jag har åkt skridskor sedan barnsben och har coachat yngre åkare under flera år.</p>
+
+        <!-- Studieprogress -->
+        <h3>Studieprogress</h3>
+        <div class="skill-bar">
+          <div class="progress" id="study-progress"></div>
+        </div>
+        <p id="progress-text"></p>
+
       </div>
     </section>
   </main>

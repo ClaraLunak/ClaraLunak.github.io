@@ -18,95 +18,104 @@
   </header>
 
   <main>
-    <section class="about-section">
-      <img src="images/profil.jpg" alt="Clara Lunak" class="profile-pic">
-      <div class="about-text">
-        <!-- Elevator Pitch -->
-        <h2>Hej! Jag är Clara</h2>
-        <p class="pitch">
-          Jag är en driven systemutvecklarstudent på Örebro universitet. 
-          Jag älskar problemlösning, maskininlärning och cybersäkerhet, men även design och användarvänliga lösningar.
-        </p>
-        <a href="cv/Clara_Lunak_CV.pdf" class="btn" target="_blank">Ladda ner CV</a>
-        
-        <!-- Tidslinje -->
-        <h3>Min akademiska resa</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="year">2023-08</span>
-            <p>Började på Systemvetensakpliga programmet, Örebro universitet, Sverige</p>
-          </div>
-            <!-- Studieprogress -->
-        <h3>Studieprogress</h3>
-        <div class="skill-bar">
-          <div class="progress" id="study-progress"></div>
+    <!-- Elevator Pitch -->
+    <section class="pitch-section">
+      <h2>Hej! Jag är Clara</h2>
+      <p class="pitch">
+        Jag är en driven systemutvecklarstudent på Örebro universitet. 
+        Jag älskar problemlösning, maskininlärning och cybersäkerhet, men även design och användarvänliga lösningar.
+      </p>
+      <a href="cv/Clara_Lunak_CV.pdf" class="btn cv-btn" target="_blank">
+        Ladda ner CV <span class="down-arrow">↓</span>
+      </a>
+    </section>
+
+    <!-- Akademisk tidslinje -->
+    <section class="timeline-section">
+      <h3>Min akademiska resa</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="year">2023-08</span>
+          <p>Började på Systemvetenskapliga programmet, Örebro universitet, Sverige</p>
         </div>
-        <p id="progress-text"></p>
-
-           <div class="timeline-item">
-            <span class="year">2024-06</span>
-            <p>Sommarkurs i Lingvistik & Fonetik</p>
-          </div>
-
-          <div class="timeline-item">
-            <span class="year">2025-02</span>
-            <p>Utbytesperiod, Prague University of Economics and Business</p>
-          </div>
+        <div class="timeline-item">
+          <span class="year">2024-06</span>
+          <p>Sommarkurs i Lingvistik & Fonetik</p>
         </div>
-
-        <!-- Kompetenser -->
-        <h3>Kompetenser</h3>
-        <div class="skills-container">
-          <div class="skill">
-            <span class="skill-name">Python</span>
-            <div class="skill-bar"><div class="progress" data-progress="80"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">C#</span>
-            <div class="skill-bar"><div class="progress" data-progress="98"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">Java</span>
-            <div class="skill-bar"><div class="progress" data-progress="95"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">JavaScript</span>
-            <div class="skill-bar"><div class="progress" data-progress="85"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">SQL</span>
-            <div class="skill-bar"><div class="progress" data-progress="99"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">HTML</span>
-            <div class="skill-bar"><div class="progress" data-progress="97"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">CSS</span>
-            <div class="skill-bar"><div class="progress" data-progress="97"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">JSON</span>
-            <div class="skill-bar"><div class="progress" data-progress="90"></div></div>
-          </div>
-          <div class="skill">
-            <span class="skill-name">.NET</span>
-            <div class="skill-bar"><div class="progress" data-progress="90"></div></div>
-          </div>
+        <div class="timeline-item">
+          <span class="year">2025-02</span>
+          <p>Utbytesperiod, Prague University of Economics and Business</p>
         </div>
+      </div>
+    </section>
 
-        <!-- Intressen -->
-        <h3>Intressen</h3>
-        <p>Skridskor, problemlösning, tech, design och kreativ kodning.</p>
+    <!-- Studieprogress -->
+    <section class="study-section">
+      <h3>Studieprogress</h3>
+      <div class="skill-bar">
+        <div class="progress" id="study-progress"></div>
+      </div>
+      <p id="progress-text"></p>
+    </section>
 
-        <!-- Framtida mål -->
-        <h3>Framtidsmål</h3>
-        <p>Att bli lead engineer inom cybersäkerhet och arbeta med innovativa projekt som kombinerar säkerhet och maskininlärning.</p>
+    <!-- Kompetenser -->
+    <section class="skills-section">
+      <h3>Kompetenser</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar"><div class="progress" data-progress="80"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">C#</span>
+          <div class="skill-bar"><div class="progress" data-progress="98"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Java</span>
+          <div class="skill-bar"><div class="progress" data-progress="95"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar"><div class="progress" data-progress="85"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">SQL</span>
+          <div class="skill-bar"><div class="progress" data-progress="99"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">HTML</span>
+          <div class="skill-bar"><div class="progress" data-progress="97"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">CSS</span>
+          <div class="skill-bar"><div class="progress" data-progress="97"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">JSON</span>
+          <div class="skill-bar"><div class="progress" data-progress="90"></div></div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">.NET</span>
+          <div class="skill-bar"><div class="progress" data-progress="90"></div></div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Fun fact -->
-        <h3>Fun fact</h3>
-        <p>Jag har åkt skridskor sedan barnsben och har coachat yngre åkare under flera år.</p>
-
+    <!-- Personligt -->
+    <section class="personal-section">
+      <div class="cards">
+        <div class="card">
+          <h3>Intressen</h3>
+          <p>Skridskor, problemlösning, tech, design och kreativ kodning.</p>
+        </div>
+        <div class="card">
+          <h3>Framtidsmål</h3>
+          <p>Att bli lead engineer inom cybersäkerhet och arbeta med innovativa projekt som kombinerar säkerhet och maskininlärning.</p>
+        </div>
+        <div class="card">
+          <h3>Fun Fact</h3>
+          <p>Jag har åkt skridskor sedan barnsben och har coachat yngre åkare under flera år.</p>
+        </div>
       </div>
     </section>
   </main>

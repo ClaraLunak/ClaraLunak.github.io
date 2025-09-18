@@ -294,4 +294,88 @@ footer p {
   color: #666;
   margin-top: 5px;
 }
+/* CV-knapp */
+.btn {
+  display: inline-block;
+  background: #d291bc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+  margin: 10px 0 20px;
+}
+.btn:hover {
+  background: #a66ab9;
+}
+
+/* Tidslinje */
+.timeline {
+  border-left: 3px solid #d291bc;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+.timeline-item {
+  margin-bottom: 15px;
+  position: relative;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #d291bc;
+  border-radius: 50%;
+}
+.timeline-item .year {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Intressen och fun fact */
+.about-text h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* Skillbars (samma som tidigare) */
+.skills-container {
+  margin-bottom: 20px;
+}
+.skill {
+  margin-bottom: 10px;
+}
+.skill-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.skill-bar {
+  width: 100%;
+  height: 25px;
+  background: #eee;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #d291bc, #a66ab9);
+  border-radius: 15px;
+  transition: width 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+#progress-text {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
 

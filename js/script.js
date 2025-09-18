@@ -1,17 +1,18 @@
-// --- Typ-animation för header ---
 document.addEventListener("DOMContentLoaded", function () {
+  // --- Typ-animation för header ---
   const headerText = "Clara Lunak";
   const headerElement = document.getElementById("typing-text");
-  let index = 0;
-
-  function typeHeader() {
-    if (index < headerText.length) {
-      headerElement.textContent += headerText.charAt(index);
-      index++;
-      setTimeout(typeHeader, 150);
+  if (headerElement) {
+    let index = 0;
+    function typeHeader() {
+      if (index < headerText.length) {
+        headerElement.textContent += headerText.charAt(index);
+        index++;
+        setTimeout(typeHeader, 150);
+      }
     }
+    typeHeader();
   }
-  typeHeader();
 
   // --- Studieprogress ---
   const studyBar = document.getElementById("study-progress");
@@ -24,8 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let progress = ((today - start) / (end - start)) * 100;
     progress = Math.min(Math.max(progress, 0), 100);
 
-    studyBar.style.width = progress + "%";
-    progressText.textContent = `Studier: ${progress.toFixed(1)}% klara`;
+    setTimeout(() => {
+      studyBar.style.width = progress + "%";
+      progressText.textContent = `Studier: ${progress.toFixed(1)}% klara`;
+    }, 300);
   }
 
   // --- Kompetens-bars ---

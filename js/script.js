@@ -25,18 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
     let progress = ((today - start) / (end - start)) * 100;
     progress = Math.min(Math.max(progress, 0), 100);
 
-    setTimeout(() => {
-      studyBar.style.width = progress + "%";
-      progressText.textContent = `Studier: ${progress.toFixed(1)}% klara`;
-    }, 300);
+    studyBar.style.width = progress + "%";
+    progressText.textContent = `Studier: ${progress.toFixed(1)}% klara`;
   }
 
   // --- Kompetens-bars ---
   const skillBars = document.querySelectorAll(".skill-bar .progress[data-progress]");
   skillBars.forEach(bar => {
     const value = bar.getAttribute("data-progress");
+
+    // Sätt width till 0 först (säkerhet)
+    bar.style.width = "0%";
+
     setTimeout(() => {
       bar.style.width = value + "%";
-    }, 500);
+      bar.textContent = value + "%"; // visar siffran i baren
+    }, 300); // liten delay så animationen syns
   });
 });

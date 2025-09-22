@@ -322,7 +322,7 @@ footer p {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -10px;
+  left: -25px;
   top: 5px;
   width: 15px;
   height: 15px;

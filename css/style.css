@@ -314,23 +314,26 @@ footer p {
   border-left: 3px solid #d291bc;
   margin: 20px 0;
   padding-left: 40px;
+  position: relative;
 }
 .timeline-item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   position: relative;
 }
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -25px;
+  left: -33px;
   top: 5px;
   width: 15px;
   height: 15px;
   background: #d291bc;
   border-radius: 50%;
+  border: 2px solid white;
 }
 .timeline-item .year {
   font-weight: bold;
+  display: inline-block;
   margin-right: 10px;
 }
 

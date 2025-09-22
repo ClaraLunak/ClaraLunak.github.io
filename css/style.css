@@ -1,24 +1,20 @@
-/* ================== Grundinställningar ================== */
+/* === Grundinställningar === */
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: #fff0f5;
   color: #333;
-}
-
-body {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
   flex: 1;
 }
 
-/* ================== Header & Navigation ================== */
+/* === Header === */
 header {
   background: #d291bc;
   color: white;
@@ -42,7 +38,7 @@ nav a:hover {
   border-bottom: 2px solid #ffe4e1;
 }
 
-/* ================== Globala knappar ================== */
+/* === Knapp === */
 .btn {
   display: inline-block;
   background: #d291bc;
@@ -57,12 +53,12 @@ nav a:hover {
   background: #a66ab9;
 }
 
-/* ================== CV-knapp ================== */
+/* CV-knapp med puls och pil */
 .btn.cv-btn {
   font-weight: bold;
   font-size: 1rem;
-  animation: pulse 1.5s infinite;
   position: relative;
+  animation: pulse 1.5s infinite;
 }
 
 .btn.cv-btn .down-arrow {
@@ -72,27 +68,22 @@ nav a:hover {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,100%{transform: scale(1);}
+  50%{transform: scale(1.05);}
 }
-
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
+  0%,100%{transform: translateY(0);}
+  50%{transform: translateY(5px);}
 }
 
-/* ================== About-sida specifik ================== */
-.about-main .pitch-section,
-.about-main .timeline-section,
-.about-main .study-section,
-.about-main .skills-section,
-.about-main .personal-section {
+/* === Sections === */
+section {
   padding: 50px 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  animation: fadeInUp 0.8s ease forwards;
 }
 
+/* === Elevator pitch === */
 .pitch-section {
   text-align: center;
 }
@@ -102,40 +93,40 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-.pitch-section .pitch {
+.pitch-section p {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto 30px;
 }
 
-/* ================== Timeline ================== */
+/* === Timeline === */
 .timeline {
   position: relative;
   padding-left: 60px;
   border-left: 3px solid #d291bc;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .timeline-item {
-  margin-bottom: 40px;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
   left: -12px;
-  top: 0;
+  top: 4px;
   width: 16px;
   height: 16px;
   background: #d291bc;
-  border: 3px solid #fff;
   border-radius: 50%;
+  border: 3px solid #fff;
   box-shadow: 0 0 0 4px rgba(210,145,188,0.15);
 }
 
 .timeline-item.future::before {
-  background: #fff;
+  background: white;
   border: 3px dashed #d291bc;
 }
 
@@ -164,14 +155,8 @@ nav a:hover {
   font-style: italic;
 }
 
-/* Fade in animation */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ================== Studieprogress ================== */
-.study-section .skill-bar {
+/* === Studieprogress === */
+.skill-bar {
   width: 100%;
   height: 25px;
   background: #eee;
@@ -180,40 +165,7 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
-.study-section .progress {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, #d291bc, #a66ab9);
-  border-radius: 15px;
-  transition: width 2s ease-in-out;
-}
-
-#progress-text {
-  margin-top: 5px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* ================== Kompetenser ================== */
-.skills-section .skill {
-  margin-bottom: 15px;
-}
-
-.skills-section .skill-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.skills-section .skill-bar {
-  width: 100%;
-  height: 25px;
-  background: #eee;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.skills-section .progress {
+.progress {
   height: 100%;
   width: 0;
   background: linear-gradient(90deg, #d291bc, #a66ab9);
@@ -222,20 +174,34 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 8px;
-  color: #fff;
+  padding-right: 10px;
+  color: white;
   font-weight: bold;
-  font-size: 0.9rem;
 }
 
-/* ================== Personliga kort ================== */
-.personal-section .cards {
+/* === Kompetenser === */
+.skills-container {
+  margin-top: 20px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* === Personligt (intressen, mål, fun fact) === */
+.cards {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.personal-section .card {
+.card {
   flex: 1 1 250px;
   background: #fff;
   border-radius: 15px;
@@ -244,12 +210,12 @@ nav a:hover {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.personal-section .card:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* ================== Footer ================== */
+/* === Footer === */
 footer {
   width: 100%;
   background: #d291bc;
@@ -266,14 +232,14 @@ footer p {
   font-size: 14px;
 }
 
-footer .social-icons a img {
+.social-icons a img {
   width: 24px;
   height: 24px;
   filter: brightness(0) invert(1);
   transition: transform 0.3s, filter 0.3s;
 }
 
-footer .social-icons a img:hover {
+.social-icons a img:hover {
   transform: scale(1.2);
   filter: brightness(1) invert(0);
 }

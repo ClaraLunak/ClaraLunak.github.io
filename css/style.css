@@ -306,6 +306,81 @@ footer p {
 .contact-form button {
   align-self: flex-start;
 }
+/* === Stilrent & kreativt lyft === */
+
+/* --- Mjuk gradient på body --- */
+body {
+  background: linear-gradient(160deg, #fff0f5 0%, #fdf5fb 100%);
+}
+
+/* --- Header med mjuk skugga och diskret pulserande highlight --- */
+header {
+  box-shadow: 0 4px 15px rgba(210,145,188,0.3);
+  position: relative;
+}
+header h1 {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+}
+header h1:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.15);
+}
+
+/* --- Nav-länkar med gradient hover --- */
+nav a:hover {
+  background: linear-gradient(90deg, #ffe4e1, #d291bc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #ffe4e1;
+}
+
+/* --- Knapp med stilren animation --- */
+.btn {
+  box-shadow: 0 4px 12px rgba(166,106,185,0.25);
+  letter-spacing: 0.5px;
+  transition: transform 0.3s, background 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #d291bc, #a66ab9);
+}
+
+/* --- CV-knapp subtil puls --- */
+.btn.cv-btn {
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* --- Cards med subtil hover-effekt --- */
+.card, .project-card, .contact-card {
+  border: 1px solid rgba(210,145,188,0.2);
+  background: linear-gradient(145deg, #ffffff, #fff5fb);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover, .project-card:hover, .contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(210,145,188,0.2);
+}
+
+/* --- Timeline dots gradient --- */
+.timeline-item::before {
+  background: linear-gradient(45deg, #d291bc, #a66ab9);
+  box-shadow: 0 0 0 4px rgba(210,145,188,0.1);
+}
+
+/* --- Progress bars med glans --- */
+.progress {
+  background: linear-gradient(90deg, #d291bc, #a66ab9);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+/* --- Footer stilren gradient och diskret shadow --- */
+footer {
+  background: linear-gradient(135deg, #d291bc, #a66ab9);
+  box-shadow: 0 -4px 15px rgba(166,106,185,0.25);
+}
 
 
 /* === About-sida === */

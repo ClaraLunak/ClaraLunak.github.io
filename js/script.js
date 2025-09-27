@@ -42,4 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
       bar.textContent = value + "%"; // visar siffran i baren
     }, 300); // liten delay så animationen syns
   });
+  const footerPlaceholder = document.getElementById("footer-placeholder");
+if (footerPlaceholder) {
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      footerPlaceholder.innerHTML = data;
+    })
+    .catch(error => console.error('Kunde inte ladda footern:', error));
+}
+
 });

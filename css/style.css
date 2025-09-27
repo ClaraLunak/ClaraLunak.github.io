@@ -242,7 +242,7 @@ footer p {
   width: 24px;
   height: 24px;
   filter: brightness(0) invert(1);
-  margin: 0 10px;
+  margin: 0 15px;
   transition: transform 0.3s, filter 0.3s;
 }
 .social-icons a img.linkedin:hover {

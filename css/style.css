@@ -79,6 +79,181 @@ nav a:hover {
   50%{transform: translateY(5px);}
 }
 
+/* Sections generellt */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #d291bc;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0);
+}
+
+/* Projekt-sida specifikt */
+.projects-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.project-card {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Kontakt-sida specifikt */
+.contact-section {
+  text-align: center;
+}
+.contact-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact-card {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.contact-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.contact-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+.contact-form button {
+  align-self: flex-start;
+}
+
+/* === Grundinställningar === */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f5;
+  color: #333;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* === Header === */
+header {
+  background: #d291bc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  border-bottom: 2px solid white;
+}
+
+nav a:hover {
+  color: #ffe4e1;
+  border-bottom: 2px solid #ffe4e1;
+}
+
+/* === Knapp === */
+.btn {
+  display: inline-block;
+  background: #d291bc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #a66ab9;
+}
+
+/* CV-knapp med puls och pil */
+.btn.cv-btn {
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  animation: pulse 1.5s infinite;
+}
+
+.btn.cv-btn .down-arrow {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  animation: bounce 1s infinite;
+}
+
+@keyframes pulse {
+  0%,100%{transform: scale(1);}
+  50%{transform: scale(1.05);}
+}
+@keyframes bounce {
+  0%,100%{transform: translateY(0);}
+  50%{transform: translateY(5px);}
+}
+
 /* === Sections === */
 section {
   padding: 50px 20px;
@@ -245,4 +420,88 @@ footer p {
 .social-icons a img:hover {
   transform: scale(1.2);
   filter: brightness(1) invert(0);
+}
+/* About page */
+.about-page .pitch-section {
+  text-align: center;
+}
+.about-page .pitch-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.about-page .pitch-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.about-page .timeline {
+  position: relative;
+  padding-left: 60px;
+  border-left: 3px solid #d291bc;
+  margin: 20px 0;
+}
+.about-page .timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.about-page .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: #d291bc;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 4px rgba(210,145,188,0.15);
+}
+.about-page .timeline-item.future::before {
+  background: white;
+  border: 3px dashed #d291bc;
+}
+.about-page .timeline-item .year {
+  position: absolute;
+  left: -80px;
+  top: 0;
+  width: 60px;
+  text-align: right;
+  font-weight: bold;
+  color: #a66ab9;
+}
+.about-page .timeline-item p {
+  background: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.about-page .timeline-item.future p {
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.about-page .skill-bar {
+  width: 100%;
+  height: 25px;
+  background: #eee;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.about-page .progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #d291bc, #a66ab9);
+  border-radius: 15px;
+  transition: width 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-weight: bold;
 }

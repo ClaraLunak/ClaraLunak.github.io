@@ -306,6 +306,105 @@ footer p {
 .contact-form button {
   align-self: flex-start;
 }
+/* === Lyxig & kreativ design === */
+
+/* --- Gradient-bakgrund för body för mer liv --- */
+body {
+  background: linear-gradient(135deg, #fff0f5 0%, #fef0f7 100%);
+}
+
+/* --- Header med subtil glow --- */
+header {
+  box-shadow: 0 4px 15px rgba(210,145,188,0.4);
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: "✨";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* --- Nav-länkar med gradient hover --- */
+nav a:hover {
+  background: linear-gradient(90deg, #ffe4e1, #d291bc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #ffe4e1;
+}
+
+/* --- Buttons med mer “lyx” och animation --- */
+.btn {
+  box-shadow: 0 4px 12px rgba(166,106,185,0.4);
+  letter-spacing: 0.5px;
+}
+
+.btn.cv-btn:hover {
+  background: linear-gradient(45deg, #d291bc, #a66ab9);
+  transform: scale(1.08);
+}
+
+/* --- Cards med hover-effekt och emojis --- */
+.card, .project-card, .contact-card {
+  border: 1px solid rgba(210,145,188,0.3);
+  background: linear-gradient(145deg, #ffffff, #fff0f5);
+  position: relative;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover::before, .project-card:hover::before, .contact-card:hover::before {
+  content: "🌟";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.2) rotate(20deg); opacity: 1; }
+}
+
+.card:hover, .project-card:hover, .contact-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 10px 25px rgba(210,145,188,0.3);
+}
+
+/* --- Timeline med gradient-dot --- */
+.timeline-item::before {
+  background: linear-gradient(45deg, #d291bc, #a66ab9);
+  box-shadow: 0 0 0 4px rgba(210,145,188,0.2);
+}
+
+/* --- Progress bars med glans --- */
+.progress {
+  background: linear-gradient(90deg, #d291bc, #a66ab9);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
+}
+
+/* --- Footer med glow --- */
+footer {
+  background: linear-gradient(135deg, #d291bc, #a66ab9);
+  box-shadow: 0 -4px 15px rgba(166,106,185,0.4);
+  position: relative;
+}
+footer::before {
+  content: "✨";
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  font-size: 1.2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
 
 /* === About-sida === */
 body.about-page .pitch-section { text-align: center; }

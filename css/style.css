@@ -6,6 +6,9 @@ html, body {
   background: #fff0f5;
   color: #333;
   min-height: 100%;
+}
+
+body {
   display: flex;
   flex-direction: column;
 }

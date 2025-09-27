@@ -306,80 +306,113 @@ footer p {
 .contact-form button {
   align-self: flex-start;
 }
-/* === Stilrent & kreativt lyft === */
+/* === Clara Pro Upgrade === */
 
-/* --- Mjuk gradient på body --- */
+/* === Färgtema === */
+:root {
+  --primary: #5A3E85;     /* djup lila */
+  --secondary: #A66AB9;   /* ljusare lila */
+  --accent: #E0C3FC;      /* glow / highlights */
+  --background: #f9f7fc;  /* mjuk bakgrund */
+  --text: #2F2F2F;        /* mörk text */
+}
+
+/* --- Body gradient och mjuk animation --- */
 body {
-  background: linear-gradient(160deg, #fff0f5 0%, #fdf5fb 100%);
-}
-
-/* --- Header med mjuk skugga och diskret pulserande highlight --- */
-header {
-  box-shadow: 0 4px 15px rgba(210,145,188,0.3);
+  background: linear-gradient(160deg, var(--background) 0%, #fff 100%);
+  color: var(--text);
   position: relative;
-}
-header h1 {
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 12px;
-  transition: transform 0.3s, background 0.3s;
-}
-header h1:hover {
-  transform: scale(1.05);
-  background: rgba(255,255,255,0.15);
+  overflow-x: hidden;
 }
 
-/* --- Nav-länkar med gradient hover --- */
-nav a:hover {
-  background: linear-gradient(90deg, #ffe4e1, #d291bc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-bottom: 2px solid #ffe4e1;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(90,62,133,0.08), transparent 70%),
+              radial-gradient(circle at 70% 70%, rgba(166,106,185,0.08), transparent 70%);
+  pointer-events: none;
+  animation: floatBG 25s infinite alternate;
 }
 
-/* --- Knapp med stilren animation --- */
+@keyframes floatBG {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(15px,-15px) scale(1.02); }
+  100% { transform: translate(-15px,15px) scale(1); }
+}
+
+/* --- Headings med elegant glow --- */
+h1, h2, h3, h4 {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(166,106,185,0.3);
+}
+
+/* --- Knapp gradient och hover effekt --- */
 .btn {
-  box-shadow: 0 4px 12px rgba(166,106,185,0.25);
-  letter-spacing: 0.5px;
-  transition: transform 0.3s, background 0.3s;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  box-shadow: 0 4px 12px rgba(90,62,133,0.25);
+  color: white;
+  transition: transform 0.3s, background 0.5s, box-shadow 0.3s;
+  background-size: 200% 200%;
+  animation: gradientFlow 6s ease infinite;
 }
+
 .btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(45deg, #d291bc, #a66ab9);
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(90,62,133,0.35);
 }
 
-/* --- CV-knapp subtil puls --- */
-.btn.cv-btn {
-  animation: pulse 1.5s infinite alternate;
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* --- Cards med subtil hover-effekt --- */
+/* --- Cards med lätt rotation och hover glow --- */
 .card, .project-card, .contact-card {
-  border: 1px solid rgba(210,145,188,0.2);
-  background: linear-gradient(145deg, #ffffff, #fff5fb);
+  border: 1px solid rgba(166,106,185,0.15);
+  background: linear-gradient(145deg, #ffffff, #f9f7fc);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover, .project-card:hover, .contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(210,145,188,0.2);
+  transform: translateY(-6px) rotateZ(1deg);
+  box-shadow: 0 12px 30px rgba(166,106,185,0.25);
 }
 
-/* --- Timeline dots gradient --- */
+/* --- Timeline dots med gradient --- */
 .timeline-item::before {
-  background: linear-gradient(45deg, #d291bc, #a66ab9);
-  box-shadow: 0 0 0 4px rgba(210,145,188,0.1);
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 0 4px rgba(166,106,185,0.1);
 }
 
-/* --- Progress bars med glans --- */
+/* --- Progress bars med gloss --- */
 .progress {
-  background: linear-gradient(90deg, #d291bc, #a66ab9);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
 }
 
-/* --- Footer stilren gradient och diskret shadow --- */
+/* --- Footer lyxig gradient och glow --- */
 footer {
-  background: linear-gradient(135deg, #d291bc, #a66ab9);
-  box-shadow: 0 -4px 15px rgba(166,106,185,0.25);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 -4px 15px rgba(90,62,133,0.25);
+}
+
+footer p {
+  text-shadow: 0 0 6px rgba(224,195,252,0.3);
+  letter-spacing: 0.5px;
+}
+
+/* --- Scroll indicator för modern touch --- */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: var(--secondary);
+  animation: bounce 2s infinite;
+  cursor: pointer;
 }
 
 

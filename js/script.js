@@ -51,43 +51,5 @@ if (footerPlaceholder) {
     })
     .catch(error => console.error('Kunde inte ladda footern:', error));
 }
-// background.js
-const canvas = document.getElementById("background-canvas");
-const ctx = canvas.getContext("2d");
-
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
-
-const binary = "01"; // binära tecken
-const fontSize = 16;
-const columns = Math.floor(width / fontSize);
-const drops = Array(columns).fill(1);
-
-// Resize canvas vid fönsterändring
-window.addEventListener("resize", () => {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-});
-
-// Rita bakgrund och siffror
-function draw() {
-  ctx.fillStyle = "rgba(10, 10, 10, 0.05)"; // semi-transparent bakgrund
-  ctx.fillRect(0, 0, width, height);
-
-  ctx.fillStyle = "#00BFA6"; // cyan accent
-  ctx.font = fontSize + "px monospace";
-
-  for (let i = 0; i < drops.length; i++) {
-    const text = binary.charAt(Math.floor(Math.random() * binary.length));
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-    if (drops[i] * fontSize > height && Math.random() > 0.975) {
-      drops[i] = 0;
-    }
-    drops[i]++;
-  }
-}
-
-setInterval(draw, 50);
 
 });

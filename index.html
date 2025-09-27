@@ -21,22 +21,29 @@
   <!-- Hero / Main-section -->
   <main>
     <section class="hero">
-      <h2>Välkommen till min portfolio</h2>
-      <p>Jag är en systemutvecklarstudent med passion för programmering och informationssäkerhet. Jag älskar att bygga skalbara, effektiva lösningar och skriva ren kod som verkligen fungerar i verkliga projekt.</p>
-      <a href="about.html" class="btn">Lär känna mig</a>
-    </section>
-
-    <!-- Optionellt: små tekniska accenter -->
-    <section class="hero-accent">
-      <p><code>&lt;HejVärlden /&gt;</code> är bara början på vad jag kan skapa!</p>
+      <div class="hero-content">
+        <h2>Bygger lösningar med precision och stil</h2>
+        <p>Jag är en systemutvecklarstudent med passion för backend, frontend och informationssäkerhet. Min kod är ren, mina projekt är skalbara, och jag älskar att skapa lösningar som fungerar i verkligheten.</p>
+        <a href="about.html" class="btn">Lär känna mig</a>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+          <!-- Exempel på subtil bakgrunds-animation med cirklar -->
+          <circle cx="100" cy="200" r="60" fill="#00BFA6" opacity="0.2">
+            <animate attributeName="r" values="60;80;60" dur="6s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="400" cy="100" r="50" fill="#1B263B" opacity="0.15">
+            <animate attributeName="r" values="50;70;50" dur="8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="700" cy="300" r="40" fill="#00BFA6" opacity="0.2">
+            <animate attributeName="r" values="40;60;40" dur="7s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
     </section>
   </main>
 
-  <!-- Placeholder för footer (behåll som du vill) -->
   <div id="footer-placeholder"></div>
-
-  <!-- Scripts -->
   <script src="js/script.js"></script>
 </body>
 </html>
-

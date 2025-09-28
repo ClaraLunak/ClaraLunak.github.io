@@ -30,19 +30,56 @@ header {
   flex-direction: column;
   align-items: center;
 }
-/*Katten*/
-<section class="hero">
-  <h2>Välkommen till min portfolio</h2>
-  <p>Systemutvecklarstudent med passion för programmering och informationssäkerhet ✨</p>
-  <a href="about.html" class="btn">Lär känna mig</a>
 
-  <!-- Tass-knapp -->
-  <button id="paw-btn" class="paw-btn">🐾</button>
+/* Tass-knapp */
+.paw-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s;
+}
+.paw-btn:hover {
+  transform: scale(1.2);
+}
 
-  <!-- Katten (dold från början) -->
-  <img src="img/cat.png" alt="Flying cat" class="flying-cat hidden">
-</section>
+/* Katten */
+.flying-cat {
+  position: fixed;
+  width: 80px;
+  bottom: 20%;
+  left: -100px;
+  pointer-events: none;
+  opacity: 0.85;
+}
 
+.hidden {
+  display: none;
+}
+
+/* Animation när katten aktiveras */
+@keyframes fly-across {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(30vw) translateY(-10vh) rotate(10deg);
+  }
+  50% {
+    transform: translateX(60vw) translateY(5vh) rotate(-10deg);
+  }
+  75% {
+    transform: translateX(90vw) translateY(-15vh) rotate(5deg);
+  }
+  100% {
+    transform: translateX(110vw) translateY(0) rotate(0deg);
+  }
+}
+
+.fly {
+  animation: fly-across 12s linear infinite;
+}
 
 
 nav a {

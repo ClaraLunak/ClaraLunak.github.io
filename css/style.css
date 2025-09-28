@@ -29,8 +29,20 @@ header {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  
 }
+/*Katten*/
+<section class="hero">
+  <h2>Välkommen till min portfolio</h2>
+  <p>Systemutvecklarstudent med passion för programmering och informationssäkerhet ✨</p>
+  <a href="about.html" class="btn">Lär känna mig</a>
+
+  <!-- Tass-knapp -->
+  <button id="paw-btn" class="paw-btn">🐾</button>
+
+  <!-- Katten (dold från början) -->
+  <img src="img/cat.png" alt="Flying cat" class="flying-cat hidden">
+</section>
+
 
 
 nav a {

@@ -51,5 +51,14 @@ if (footerPlaceholder) {
     })
     .catch(error => console.error('Kunde inte ladda footern:', error));
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const pawBtn = document.getElementById("paw-btn");
+  const cat = document.querySelector(".flying-cat");
+
+  pawBtn.addEventListener("click", () => {
+    cat.classList.remove("hidden");
+    cat.classList.add("fly");
+  });
+});
 
 });

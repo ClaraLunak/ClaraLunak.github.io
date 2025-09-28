@@ -246,11 +246,6 @@ footer p {
   transition: transform 0.3s, filter 0.3s;
 }
 
-.social-icons a img:hover {
-  transform: scale(1.2);
-  filter: brightness(1) invert(0);
-}
-
 /* === Projekt-sida === */
 .projects-grid {
   display: flex;

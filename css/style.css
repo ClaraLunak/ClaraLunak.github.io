@@ -108,6 +108,10 @@ nav a:hover {
   text-decoration: none;
   transition: background 0.3s;
 }
+
+
+.btn:hover {
+  background: #a66ab9;
 }
 
 .btn {
@@ -117,18 +121,7 @@ nav a:hover {
   animation: pulse 1.5s infinite;
 }
 
-.btn:hover {
-  background: #a66ab9;
-}
-
-.btn.cv-btn {
-  font-weight: bold;
-  font-size: 1rem;
-  position: relative;
-  animation: pulse 1.5s infinite;
-}
-
-.btn.cv-btn .down-arrow {
+.btn .down-arrow {
   margin-left: 10px;
   font-size: 1.2rem;
   animation: bounce 1s infinite;

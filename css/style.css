@@ -98,7 +98,7 @@ nav a:hover {
   border-bottom: 2px solid #ffe4e1;
 }
 
-/* === Knapp === */
+/* === Knappar === */
 .btn {
   display: inline-block;
   background: #d291bc;
@@ -107,6 +107,14 @@ nav a:hover {
   border-radius: 30px;
   text-decoration: none;
   transition: background 0.3s;
+}
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  animation: pulse 1.5s infinite;
 }
 
 .btn:hover {

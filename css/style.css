@@ -352,14 +352,12 @@ footer p {
 }
 /* === Sned CTA-knapp === */
 .cta-tilted {
-  position: absolute;
+  position: fixed;
   right: 40px;
-  top: 55%;
+  top: 120%;
   transform: rotate(6deg);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  animation: cta-float-right 2.5s ease-in-out infinite;
+  z-index: 1000;
+  animation: cta-float 2.5s ease-in-out infinite;
 }
 
 .cta-tilted:hover {
@@ -367,20 +365,26 @@ footer p {
 }
 
 /* Pil som pekar och studsar */
-.cta-arrow {
-  display: inline-block;
-  animation: arrow-nudge 1.2s infinite;
+.cta-arrow-pointer {
+  position: fixed;
+  top: 90px;
+  right: 130px;
+  font-size: 2rem;
+  transform: rotate(20deg);
+  z-index: 999;
+  animation: arrow-bounce 1.2s infinite;
 }
 
-@keyframes arrow-nudge {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(6px); }
+@keyframes arrow-bounce {
+  0%, 100% { transform: rotate(20deg) translateX(0); 
+}
+  50% { transform: rotate(20deg) translateX(8px); }
 }
 
 /* Lätt flytande rörelse */
-@keyframes cta-float-right {
+@keyframes cta-float {
   0%, 100% { transform: rotate(6deg) translateY(0); }
-  50% { transform: rotate(6deg) translateY(-6px); }
+  50% { transform: rotate(6deg) translateY(-5px); }
 }
 
 

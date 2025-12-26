@@ -368,25 +368,37 @@ footer p {
   transform: rotate(-2deg) scale(1.05);
 }
 
-
-#paw-arrow {
-  display: block;
-  margin: 20px auto;
-  overflow: visible;
+/* Container för text + tass + linje */
+.paw-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* avstånd mellan text och tass */
+  justify-content: center;
+  margin-top: 50px;
 }
 
-#paw-path {
-  stroke-dasharray: 500; /* längden på path, justera om behövs */
-  stroke-dashoffset: 500;
-  animation: draw-path 2s forwards ease-out 0.5s; /* ritar efter 0.5s */
+/* Linje bakom text och tass */
+#paw-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: -1; /* så att linjen ligger bakom */
 }
 
-@keyframes draw-path {
+#paw-line line {
+  stroke-dasharray: 300;  /* justera längd efter behov */
+  stroke-dashoffset: 300; /* börjar dold */
+  animation: draw-line 1.5s forwards ease-out 0.5s;
+}
+
+@keyframes draw-line {
   to {
     stroke-dashoffset: 0;
   }
 }
-
 
 /* Tass-knappen */
 .paw-btn {

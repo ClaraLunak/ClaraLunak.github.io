@@ -16,24 +16,20 @@
       <section class="hero"> 
         <h2>Välkommen till min portfolio sida!</h2>
             <!-- Text -->
-  <span id="paw-text">Klicka på tassarna!</span>
+ <span id="paw-text">Klicka på tassarna!</span>
 
-  <!-- SVG-pil som ska ritas -->
-  <svg id="paw-arrow" width="300" height="100">
-    <defs>
-      <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-              refX="10" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="#d291bc" />
-      </marker>
-    </defs>
-    <line x1="0" y1="25" x2="150" y2="25" stroke="#d291bc" stroke-width="4" marker-end="url(#arrowhead)" />
-  </svg>
-        
-    <!-- Kurvig path från text till knapp -->
-    <path d="M0,50 C80,0 220,100 300,50" stroke="#d291bc" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
-  </svg>
-        <!-- Tass-knapp -->
-   <button id="paw-btn" class="paw-btn">🐾</button>
+<svg id="paw-arrow" width="300" height="100">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d291bc" />
+    </marker>
+  </defs>
+  <path id="paw-path" d="M0,50 C80,0 220,100 300,50" stroke="#d291bc" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+</svg>
+
+<button id="paw-btn" class="paw-btn">🐾</button>
+
   <!-- Katten (dold från början) -->
   <img src="images/kitty.png" alt="Flying cat" class="flying-cat">
       <!-- CTA-knapp -->

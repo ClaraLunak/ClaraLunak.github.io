@@ -123,28 +123,6 @@ nav a:hover {
   background: #a66ab9;
 }
 
-.btn.cv-btn {
-  font-weight: bold;
-  font-size: 1rem;
-  position: relative;
-  animation: pulse 1.5s infinite;
-}
-
-.btn.cv-btn .down-arrow {
-  margin-left: 10px;
-  font-size: 1.2rem;
-  animation: bounce 1s infinite;
-}
-
-@keyframes pulse {
-  0%,100%{transform: scale(1);}
-  50%{transform: scale(1.05);}
-}
-
-@keyframes bounce {
-  0%,100%{transform: translateY(0);}
-  50%{transform: translateY(5px);}
-}
 
 /* === Sektioner === */
 section {

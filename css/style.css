@@ -369,24 +369,24 @@ footer p {
 }
 
 
-/* SVG-pil */
 #paw-arrow {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
   overflow: visible;
 }
 
-#paw-arrow line {
-  stroke-dasharray: 200; /* justera efter avstånd */
-  stroke-dashoffset: 200; /* börjar dold */
-  animation: draw-line 1.5s forwards ease-out 0.5s; /* delay 0.5s */
-} 
+#paw-path {
+  stroke-dasharray: 500; /* längden på path, justera om behövs */
+  stroke-dashoffset: 500;
+  animation: draw-path 2s forwards ease-out 0.5s; /* ritar efter 0.5s */
+}
 
 @keyframes draw-path {
   to {
     stroke-dashoffset: 0;
   }
 }
+
 
 /* Tass-knappen */
 .paw-btn {

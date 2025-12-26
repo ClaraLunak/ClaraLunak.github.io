@@ -372,17 +372,17 @@ footer p {
 /* SVG-pil */
 #paw-arrow {
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
   overflow: visible;
 }
 
-#paw-arrow line {
+/* #paw-arrow line {
   stroke-dasharray: 200; /* justera efter avstånd */
-  stroke-dashoffset: 200; /* börjar dold */
-  animation: draw-line 1.5s forwards ease-out 0.5s; /* delay 0.5s */
-}
+  /* stroke-dashoffset: 200; /* börjar dold */
+  /* animation: draw-line 1.5s forwards ease-out 0.5s; /* delay 0.5s */
+} */ */ */
 
-@keyframes draw-line {
+@keyframes draw-path {
   to {
     stroke-dashoffset: 0;
   }

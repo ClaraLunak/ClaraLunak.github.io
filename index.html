@@ -15,12 +15,27 @@
     <main> 
       <section class="hero"> 
         <h2>Välkommen till min portfolio sida!</h2>
-            
+            <!-- Text -->
+  <span id="paw-text">Klicka på tassarna!</span>
+
+  <!-- SVG-pil som ska ritas -->
+  <svg id="paw-arrow" width="150" height="50">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+              refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#d291bc" />
+      </marker>
+    </defs>
+    <line x1="0" y1="25" x2="150" y2="25" stroke="#d291bc" stroke-width="4" marker-end="url(#arrowhead)" />
+  </svg>
         <!-- Tass-knapp -->
-   <button id="paw-btn" class="paw-btn">🐾</button> <a>Klicka på tassarna!</a>
+   <button id="paw-btn" class="paw-btn">🐾</button>
   <!-- Katten (dold från början) -->
   <img src="images/kitty.png" alt="Flying cat" class="flying-cat">
-       <a href="about.html" class="btn cta-tilted">Lär känna mig mer</a>
+      <!-- CTA-knapp -->
+  <a href="about.html" class="btn cta-tilted">
+    Lär känna mig mer
+  </a>
 
 </section>
     </main> 

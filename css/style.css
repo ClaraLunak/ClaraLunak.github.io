@@ -38,10 +38,19 @@ header {
   font-size: 2rem;
   cursor: pointer;
   margin-top: 20px;
-  transition: transform 0.2s;
+  animation: paw-bounce 2s infinite ease-in-out;
 }
 .paw-btn:hover {
-  transform: scale(1.2);
+  animation-play-state: paused;
+  transform: scale(1.3);
+}
+@keyframes paw-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 /* Katten */

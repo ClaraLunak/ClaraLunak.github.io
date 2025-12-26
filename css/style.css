@@ -71,17 +71,25 @@ nav a:hover {
   z-index: -1;
 }
 
-#paw-line line {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: draw-line 1.5s forwards ease-out 0.5s;
+
+#paw-curves path {
+  stroke-dasharray: 500; /* längd på pathen, justera */
+  stroke-dashoffset: 500;
+  animation: draw-curve 2s forwards ease-out;
 }
 
-@keyframes draw-line {
-  to {
-    stroke-dashoffset: 0;
-  }
+#left-path {
+  animation-delay: 0s;
 }
+
+#right-path {
+  animation-delay: 0.5s;
+}
+
+@keyframes draw-curve {
+  to { stroke-dashoffset: 0; }
+}
+
 
 /* Tass-knapp */
 .paw-btn {

@@ -359,17 +359,15 @@ footer p {
   z-index: 1000;
   animation: cta-float 2.5s ease-in-out infinite;
 }
-
-.cta-tilted:hover {
-  transform: rotate(-2deg) scale(1.05);
-}
-
-
 /* Lätt flytande rörelse */
 @keyframes cta-float {
   0%, 100% { transform: rotate(6deg) translateY(0); }
   50% { transform: rotate(6deg) translateY(-5px); }
 }
+.cta-tilted:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
 
 /* SVG-pil */
 #paw-arrow {

@@ -27,9 +27,10 @@ header {
 }
 .hero {
   display: felx;
+  felx-direction: column;
   text-align: center;
-  flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 /* Tass-knapp */
@@ -351,12 +352,14 @@ footer p {
 }
 /* === Sned CTA-knapp === */
 .cta-tilted {
-  margin-top: 30px;
-  transform: rotate(-4deg);
+  position: absolute;
+  right: 40px;
+  top: 55%;
+  transform: rotate(6deg);
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  animation: cta-float 2.5s ease-in-out infinite;
+  animation: cta-float-right 2.5s ease-in-out infinite;
 }
 
 .cta-tilted:hover {
@@ -375,9 +378,9 @@ footer p {
 }
 
 /* Lätt flytande rörelse */
-@keyframes cta-float {
-  0%, 100% { transform: rotate(-4deg) translateY(0); }
-  50% { transform: rotate(-4deg) translateY(-4px); }
+@keyframes cta-float-right {
+  0%, 100% { transform: rotate(6deg) translateY(0); }
+  50% { transform: rotate(6deg) translateY(-6px); }
 }
 
 

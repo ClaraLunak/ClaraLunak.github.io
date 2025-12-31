@@ -283,6 +283,10 @@ body.about-page .card:hover {
 }
 /* Individuella Projekt sidan */
 /* Projekt-sida: enskilda projekt med kort */
+h2 {
+  text-align: center;
+}
+
 .project-section {
   max-width: 900px;
   margin: 50px auto;

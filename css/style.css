@@ -281,139 +281,83 @@ body.about-page .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
-/* === Projekt-sidan === */
-.projects-grid {
+
+.projects-cards {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 25px;
   justify-content: center;
+  margin: 50px 20px;
 }
 
 .project-card {
-  flex: 1 1 250px;
   background: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-.project-page {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background: linear-gradient(135deg, #fff0f5, #f8e1f4);
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  font-family: 'Poppins', sans-serif;
-  transition: transform 0.3s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.project-page:hover {
-  transform: translateY(-5px);
-}
-
-.project-page h1 {
-  font-size: 2.7rem;
-  margin-bottom: 20px;
-  color: #a66ab9;
-  text-align: center;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.project-page img {
+.project-card img {
+  width: 100%;
   display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 25px auto;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-page img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+.project-info {
+  padding: 20px;
 }
 
-.project-page p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  text-align: justify;
+.project-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #a66ab9;
+}
+
+.project-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
   color: #333;
 }
 
-.project-page ul {
+.project-info ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.project-page ul li {
+.project-info ul li {
   background: #d291bc;
   color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.btn-download, .btn-back {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 10px 10px 0 0;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
 }
 
 .btn-download {
   background: linear-gradient(45deg, #d291bc, #a66ab9);
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-download:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.btn-back {
-  background: #fff;
-  color: #a66ab9;
-  border: 2px solid #a66ab9;
-}
-
-.btn-back:hover {
-  background: #a66ab9;
-  color: #fff;
-}
-
-/* Mobilanpassning */
-@media (max-width: 600px) {
-  .project-page {
-    margin: 30px 10px;
-    padding: 20px;
-  }
-
-  .project-page h1 {
-    font-size: 2.2rem;
-  }
-
-  .project-page ul {
-    gap: 10px;
-  }
-}
 
 /* === Kontakt-sidan === */
 .contact-section {

@@ -51,46 +51,6 @@ nav a:hover {
   position: relative;
 }
 
-/* Container för text + tass + linje */
-.paw-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-/* Linje bakom text och tass */
-#paw-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 4px;
-  z-index: -1;
-}
-
-
-#paw-curves path {
-  stroke-dasharray: 500; /* längd på pathen, justera */
-  stroke-dashoffset: 500;
-  animation: draw-curve 2s forwards ease-out;
-}
-
-#left-path {
-  animation-delay: 0s;
-}
-
-#right-path {
-  animation-delay: 0.5s;
-}
-
-@keyframes draw-curve {
-  to { stroke-dashoffset: 0; }
-}
-
-
 /* Tass-knapp */
 .paw-btn {
   display: inline-block;

@@ -111,11 +111,12 @@ nav a:hover {
 
 .cta-tilted {
   position: fixed;
-  right: 40px;
-  top: 120px;
-  transform: rotate(6deg);
-  z-index: 1000;
-  animation: cta-float 2.5s ease-in-out infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: red;
+  z-index: 9999;
+
 }
 
 @keyframes cta-float {
@@ -171,12 +172,5 @@ footer p {
   margin: 0 15px;
   transition: transform 0.3s, filter 0.3s;
 }
-.cta-tilted {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: red;
-  z-index: 9999;
-}
+
 

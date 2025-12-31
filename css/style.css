@@ -281,7 +281,7 @@ body.about-page .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
-/* Projekt sidan */
+/* Individuella Projekt sidan */
 .project-section {
   margin: 50px auto;
   max-width: 900px;
@@ -327,7 +327,82 @@ body.about-page .card:hover {
   font-size: 0.9rem;
   color: #333;
 }
+/* Stora projekt sidan */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.project-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h2 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #a66ab9;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  background: #d291bc;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.project-card .btn:hover {
+  background: #a66ab9;
+  transform: scale(1.05);
+}
+
+/* === Responsivitet === */
+@media (max-width: 900px) {
+  .project-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+}
 
 /* === Kontakt-sidan === */
 .contact-section {

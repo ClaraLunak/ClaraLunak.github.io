@@ -112,7 +112,7 @@ nav a:hover {
 .cta-tilted {
   position: fixed;
   right: 40px;
-  top: 120%;
+  top: 120px;
   transform: rotate(6deg);
   z-index: 1000;
   animation: cta-float 2.5s ease-in-out infinite;

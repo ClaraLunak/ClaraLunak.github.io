@@ -24,15 +24,9 @@
       <div class="paw-container">
         <span id="paw-text">Klicka på tassarna!</span>
         <button id="paw-btn" class="paw-btn">🐾</button>
-
-        <!-- Linjer från vänster och höger som möts på mitten -->
-        <svg id="paw-lines" width="600%" height="150">
-         <path id="left-path" d="M0,75 C150,0 300,75 300,75" stroke="#d291bc" stroke-width="4" fill="none" />
-    <path id="right-path" d="M600,75 C450,150 300,75 300,75" stroke="#d291bc" stroke-width="4" fill="none" />
-        </svg>
       </div>
 
-      <a href="about.html" class="btn cta-tilted">Lär känna mig mer</a>
+      <a href="about.html" class="btn cta-tilted">Lär känna mig</a>
     </section>
 
     <img src="images/kitty.png" alt="Flying cat" class="flying-cat">
@@ -40,19 +34,5 @@
 
   <div id="footer-placeholder"></div>
   <script src="js/script.js"></script>
-
-  <script>
-    // Animerar linjerna som ritas
-    const leftLine = document.querySelector('.line-left');
-    const rightLine = document.querySelector('.line-right');
-
-    leftLine.style.strokeDasharray = leftLine.getTotalLength();
-    leftLine.style.strokeDashoffset = leftLine.getTotalLength();
-    rightLine.style.strokeDasharray = rightLine.getTotalLength();
-    rightLine.style.strokeDashoffset = rightLine.getTotalLength();
-
-    leftLine.animate([{ strokeDashoffset: leftLine.getTotalLength() }, { strokeDashoffset: 0 }], { duration: 1000, fill: 'forwards' });
-    rightLine.animate([{ strokeDashoffset: rightLine.getTotalLength() }, { strokeDashoffset: 0 }], { duration: 1000, fill: 'forwards' });
-  </script>
 </body>
 </html>

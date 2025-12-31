@@ -281,81 +281,51 @@ body.about-page .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
+/* Projekt sidan */
+.project-section {
+  margin: 50px auto;
+  max-width: 900px;
+  text-align: center;
+}
 
-.projects-cards {
+.project-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.project-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
   justify-content: center;
-  margin: 50px 20px;
+  margin-top: 20px;
 }
 
 .project-card {
   background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 180px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.project-card img {
-  width: 100%;
-  display: block;
-}
-
-.project-info {
-  padding: 20px;
-}
-
-.project-info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.project-card h3 {
+  margin-top: 0;
   color: #a66ab9;
+  font-size: 1.1rem;
 }
 
-.project-info p {
-  font-size: 1rem;
-  margin-bottom: 15px;
+.project-card p {
+  font-size: 0.9rem;
   color: #333;
-}
-
-.project-info ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.project-info ul li {
-  background: #d291bc;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 0.85rem;
-}
-
-.btn-download {
-  background: linear-gradient(45deg, #d291bc, #a66ab9);
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  display: inline-block;
-  font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-download:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 

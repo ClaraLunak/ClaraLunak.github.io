@@ -348,7 +348,7 @@ h2 {
   width: 90%;        /* fyller nästan hela kortet, men med luft runt */
   max-width: 200px;  /* begränsar storleken på större skärmar */
   display: block;
-  margin: 0 auto 15px; /* centrerar bilden och skapar lite utrymme under */
+  margin: 0 auto 10px; /* centrerar bilden och skapar lite utrymme under */
   border-radius: 10px;  /* rundade hörn */
   box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* liten skugga för djup */
 }

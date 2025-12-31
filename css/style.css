@@ -115,6 +115,8 @@ nav a:hover {
   top: 60px;      /* placering uppe */
   right: 40px;       /* placering till höger */
   transform: rotate(6deg); /* sned vinkel */
+  border: 2px solid white; /* tunn vit kant runt om */
+  border-radius: 30px;     /* rundade hörn */
   z-index: 9999;
   animation: cta-float 2.5s ease-in-out infinite;
 }

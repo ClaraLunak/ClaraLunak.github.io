@@ -288,6 +288,14 @@ h2 {
   margin-right: auto;
   width: fit-content; /* eller en specifik bredd */
 }
+.project-image {
+  width: 60%;       /* gör bilden mindre än full bredd */
+  max-width: 600px; /* sätter ett maxmått */
+  display: block;
+  margin: 0 auto 20px; /* centrerar bilden och lägger lite mellanrum under */
+  border-radius: 15px; /* rundade hörn om du vill */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* liten skugga */
+}
 
 .project-section {
   max-width: 900px;

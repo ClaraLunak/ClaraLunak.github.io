@@ -282,9 +282,10 @@ body.about-page .card:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 /* Individuella Projekt sidan */
+/* Projekt-sida: enskilda projekt med kort */
 .project-section {
-  margin: 50px auto;
   max-width: 900px;
+  margin: 50px auto;
   text-align: center;
 }
 
@@ -292,7 +293,7 @@ body.about-page .card:hover {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .project-cards {
@@ -300,21 +301,16 @@ body.about-page .card:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .project-card {
   background: #fff;
   border-radius: 15px;
   padding: 20px;
-  width: 180px;
+  width: 250px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: left;
 }
 
 .project-card h3 {
@@ -324,9 +320,15 @@ body.about-page .card:hover {
 }
 
 .project-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #333;
 }
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
 /* Stora projekt sidan */
 .projects-grid {
   display: flex;

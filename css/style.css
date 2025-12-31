@@ -284,7 +284,9 @@ body.about-page .card:hover {
 /* Individuella Projekt sidan */
 /* Projekt-sida: enskilda projekt med kort */
 h2 {
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content; /* eller en specifik bredd */
 }
 
 .project-section {

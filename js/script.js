@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const progressText = document.getElementById("progress-text");
   if (studyBar && progressText) {
     const start = new Date("2023-08-26");
-    const end = new Date("2026-06-15");
+    const end = new Date("2026-06-09");
     const today = new Date();
 
     let progress = ((today - start) / (end - start)) * 100;

@@ -287,18 +287,17 @@ body.about-page .card:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 /* Individuella Projekt sidan */
-/* Projekt-sida: enskilda projekt med kort */
 h2 {
   margin-left: auto;
   margin-right: auto;
-  width: fit-content; /* eller en specifik bredd */
+  width: fit-content; /* specifik bredd */
 }
 .project-image {
   width: 60%;       /* gör bilden mindre än full bredd */
-  max-width: 600px; /* sätter ett maxmått */
+  max-width: 600px; 
   display: block;
   margin: 0 auto 20px; /* centrerar bilden och lägger lite mellanrum under */
-  border-radius: 15px; /* rundade hörn om du vill */
+  border-radius: 15px; /* rundade hörn */
   box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* liten skugga */
 }
 

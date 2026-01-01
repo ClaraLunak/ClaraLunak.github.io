@@ -502,7 +502,7 @@ footer {
   background: #d291bc;
   color: white;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -516,7 +516,7 @@ footer p {
 
 .social-icons a img {
   width: 24px;
-  height: 24px;
+  height: 25px;
   filter: brightness(0) invert(1);
   margin: 0 15px;
   transition: transform 0.3s, filter 0.3s;

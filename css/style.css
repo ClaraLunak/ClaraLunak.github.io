@@ -518,7 +518,7 @@ footer p {
   width: 24px;
   height: 25px;
   filter: brightness(0) invert(1);
-  margin: 0 15px;
+  margin: 0 13px;
   transition: transform 0.3s, filter 0.3s;
   margin-right: 40px;
 }

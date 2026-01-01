@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // --- Typ-animation för header ---
-  const headerText = "Clara Lunak";
+  const headerText = "Clara Codes";
   const headerElement = document.getElementById("typing-text");
   if (headerElement) {
     let index = 0;
